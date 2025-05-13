@@ -7,6 +7,7 @@ public class CharacterUI extends JFrame {
         setSize(1200, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
+        setBackground(Color.BLACK);
 
         // Panel-panel modular
         HeaderPanel header = new HeaderPanel();
@@ -15,7 +16,9 @@ public class CharacterUI extends JFrame {
 
         add(header, BorderLayout.NORTH);
         add(sidebar, BorderLayout.WEST);
-        add(new JScrollPane(characterGrid, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED), BorderLayout.CENTER);
+        add(new JScrollPane(characterGrid,
+        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED), BorderLayout.CENTER);
 
         setVisible(true);
     }
